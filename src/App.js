@@ -1,8 +1,8 @@
+import React from "react";
+import AppRouter from "./components/Router";
 
 function App() {
-  return (
-    <div>Hello</div>
-  );
+  return <AppRouter></AppRouter>;
 }
 
 export default App;
