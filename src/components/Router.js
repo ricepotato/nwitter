@@ -5,14 +5,14 @@ import Auth from "../routes/Auth";
 import Home from "../routes/Home";
 import Navigation from "./Navigation";
 
-const AppRouter = ({ isLoggedin }) => {
+const AppRouter = ({ isLoggedin, userObj }) => {
   return (
     <Router>
       {isLoggedin && <Navigation />}
       <Routes>
         {isLoggedin ? (
           <>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/" element={<Home userObj={userObj} />} />
             <Route exact path="/profile" element={<Profile />} />
           </>
         ) : (
